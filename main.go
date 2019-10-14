@@ -11,6 +11,6 @@ func main() {
 		fmt.Fprintln(w, "Hello, thkim256")
 	})
 
-	log.Println("start http listening :8888")
+	log.Println("시작 http listening :8888")
 	log.Fatal(http.ListenAndServe(":8888", nil))
 }
