@@ -26,3 +26,11 @@ COPY --from=builder /go/bin/hello  /go/bin/hello
 
 # Run the hello binary.
 ENTRYPOINT ["/go/bin/hello"]
+
+# Full example
+# FROM golang:1.8
+# WORKDIR /go/src/hello
+# COPY . .
+# RUN go get -d -v
+# RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -ldflags="-w -s" -o /go/bin/hello
+# ENTRYPOINT ["/go/bin/hello"]
